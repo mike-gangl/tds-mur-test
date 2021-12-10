@@ -101,7 +101,7 @@
         enhance="all">
         <aggregation dimName="time" type="joinExisting">
 		<scan location="cdms3:podaac-mur-access-study?MUR-JPL-L4-GLOB-v4.1"
-                dateFormatMark="MUR-JPL-L4-GLOB-v4.1/#yyyyMMd"
+                dateFormatMark="MUR-JPL-L4-GLOB-v4.1/#yyyyMMdd"
                 suffix=".nc" />
         </aggregation>
       </netcdf>
