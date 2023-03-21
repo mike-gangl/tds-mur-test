@@ -50,9 +50,14 @@ all files:
 2021-09-23 14:55:40  760265789 20210202090000-JPL-L4_GHRSST-SSTfnd-MUR-GLOB-v02.0-fv04.1.nc
 ```
 
-Command to start the
+Command to start the server with s3 caching turned on
 ```
 sudo docker run -d -p 80:8080 -v $PWD/log4j2.xml:/usr/local/tomcat/webapps/thredds/WEB-INF/classes/log4j2.xml  -v $PWD/.aws/credentials:/usr/local/tomcat/.aws/credentials -v $PWD/catalog.xml:/usr/local/tomcat/content/thredds/catalog.xml -v $PWD/mur-1km.xml:/usr/local/tomcat/content/thredds/mur-1km.xml unidata/thredds-docker:5.0
+```
+
+Command to start the server with s3 caching turned off
+```
+sudo docker run -d -p 80:8080 -v $PWD/javaopts.sh:/usr/local/tomcat/bin/javaopts.sh -v $PWD/log4j2.xml:/usr/local/tomcat/webapps/thredds/WEB-INF/classes/log4j2.xml  -v $PWD/.aws/credentials:/usr/local/tomcat/.aws/credentials -v $PWD/catalog.xml:/usr/local/tomcat/content/thredds/catalog.xml -v $PWD/mur-1km.xml:/usr/local/tomcat/content/thredds/mur-1km.xml unidata/thredds-docker:5.0
 ```
 
 ## tests
